@@ -133,7 +133,6 @@ def process_request():
         num_inference_steps=30,
     ).frames[0]
 
-    output = dummy_pipe("TEST")
 
     mp4_path = app.config["MP4_OUTPUT_FOLDER"] + "/" + gif_name + ".mp4"
     gif_path = app.config["GIF_OUTPUT_FOLDER"] + "/" + gif_name + ".gif"

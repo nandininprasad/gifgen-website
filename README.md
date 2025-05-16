@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GIFgen
 
-## Getting Started
+A gif generation pipeline that uses the Wan2.1 model.
+Transfomrs natural language, in addition to style choices and optional image generation.
 
-First, run the development server:
 
-```bash
+### Installation Guide
+
+To run the front end
+
+```
+cd frontend
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run the server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+cd server
 
-## Learn More
+pip install -r requirements.txt
 
-To learn more about Next.js, take a look at the following resources:
+flask run
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To get the flask server running. 
+Configure the HOST ip address in the app.py for the server and the page.txt file in the frontend to match,
+so that the frontend and the server can communicate. Please create a file `.env` with your Open AI API key to enable propmpt enhancement.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+# Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Natural language to Ideal prompt conversion.
+- Easy to use style changer.
+- Optional Image upload to serve as the starting frame.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
